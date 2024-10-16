@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="basePath">./logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="LogFile" fileName="${basePath}/application.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <!--            <AppenderRef ref="Console"/>-->
+            <AppenderRef ref="LogFile"/>
+        </Root>
+        <Logger name="com.epam.gym.stepdefinitions" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="LogFile"/>
+        </Logger>
+    </Loggers>
+</Configuration>
+
+        <!--Here we can user multiple log levels all <Trace<Debug<Info<Warn<Error<Fatal-->
