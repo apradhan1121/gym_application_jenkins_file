@@ -57,7 +57,7 @@ Feature: User Registration API Testing
       | Name     | Email                    | Password  | YourTarget  | PreferableActivity | StatusCode | Message                                                                                                            |
 
     # Valid Input
-      | John Doe | validemail1249@gmail.com | Passw0rd! | Weight Loss | Yoga               | 200        | "User created successfully"                                                                                        |
+      | John Doe | validemail289@gmail.com | Passw0rd! | Weight Loss | Yoga               | 200        | "User created successfully"                                                                                        |
       | John Doe | invfalidemail2           | Passw0rd! | Weight Loss | Yoga               | 400        | "Invalid email format"                                                                                             |
       | John Doe | @gmail.com               | Passw0rd! | Weight Loss | Yoga               | 400        | "Invalid email format"                                                                                             |
       | John Doe | raj3214@gmail.com        | passw0rd! | Weight Loss | Yoga               | 400        | "Error signing up user: Password did not conform with password policy: Password must have uppercase characters"    |
