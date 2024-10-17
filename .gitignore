@@ -42,6 +42,5 @@ build/
 logs/
 target
 build
-src/main/resources/config.properties
 
 .idea
